@@ -1,7 +1,7 @@
 ## Git 
 Git est un logiciel de source control, il permet :
 - d'avoir un historique des modifications de ses fichiers,
-- la collaboration entre developpeur lors du developpement d'une application informatique
+- la collaboration entre developpeurs lors du developpement d'une application informatique
 
 https://fr.wikipedia.org/wiki/Git
 
