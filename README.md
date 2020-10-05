@@ -1,6 +1,18 @@
-# CoursCSharp
+## Git 
+Git est un logiciel de source control, il permet :
+- d'avoir un historique des modifications de ses fichiers,
+- la collaboration entre developpeur lors du developpement d'une application informatique
+https://fr.wikipedia.org/wiki/Git
 
-## Glossaire Introduction
+# Différents logiciels pour utiliser Git
+- SourceTree
+- Fork
+- GitExtensions
 
-# Programme :
-Ensemble de fichier compilable dans un langage. Lorsque les fichiers sont compilés le programme est transformé en langage machine pour être éxécuté.
+# Git Command
+clone
+add
+fetch
+pull
+commit
+push
