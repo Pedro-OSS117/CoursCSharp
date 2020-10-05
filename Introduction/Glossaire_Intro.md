@@ -8,11 +8,14 @@ paradigme informatique à base d'instructions en séquence éxécutées par l'or
 
 ## Programmation Orientée Objet (POO)
 paradigme informatique à partir d'objet.
+https://en.wikipedia.org/wiki/Object-oriented_programming
 
 ## Softwate Development Kit (SDK)
 ensemble d'outils logiciel d'une technologie particulière, destiné au developpeur. (Ex SDK DotNet)
 
 ## Integrated Development Environment (IDE) 
+Environement de developpement pour un langage. Ex Visual Code pour differents langages comme le C, C++, CSharp. Intellij pour le Java.
+https://fr.wikipedia.org/wiki/Environnement_de_d%C3%A9veloppement
 
 ## Octet (Byte) : 
 En informatique, un octet est un multiplet de 8 bits codant une information1.
@@ -21,12 +24,14 @@ Un octet permet de coder des valeurs numériques ou jusqu'à 256 caractères dif
 
 ## Langage Machine 
 Code lisible par la machine fait de 0 et 1.
+https://en.wikipedia.org/wiki/Machine_code
 
 ## Machine virtuelle 
 Programme intermediaire permettant de lire le Byte Code.
+https://fr.wikipedia.org/wiki/Machine_virtuelle
 
 ## Byte Code VS Code Machine :
-Pour qu'une machine puisse lire du Byte Code, une machine virtuelle est necessaire.
+Pour qu'une machine puisse lire du Byte Code, une machine virtuelle est necessaire. Alors qu'une machine peut lire directement du langage machine, si celui ci est valide pour son architecture.
 
 ## Bytecode 
 Code intermediare https://fr.wikipedia.org/wiki/Bytecode
