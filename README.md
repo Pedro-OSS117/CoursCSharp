@@ -2,6 +2,7 @@
 Git est un logiciel de source control, il permet :
 - d'avoir un historique des modifications de ses fichiers,
 - la collaboration entre developpeur lors du developpement d'une application informatique
+
 https://fr.wikipedia.org/wiki/Git
 
 # Différents logiciels pour utiliser Git
@@ -10,9 +11,9 @@ https://fr.wikipedia.org/wiki/Git
 - GitExtensions
 
 # Git Command
-clone
-add
-fetch
-pull
-commit
-push
+- clone
+- add
+- fetch
+- pull
+- commit
+- push
