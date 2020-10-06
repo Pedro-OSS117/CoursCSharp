@@ -1,0 +1,124 @@
+===== Qu'est ce qu'un programme ?
+- Un Ensemble de fichiers dans un langage qui compilent.
+- Un programme à un début et une fin.
+- Une suite d'instruction qui s'execute.
+- Un programme a un point d'entrée.
+
+===== Les Variables - Types de Base
+
+- Qu'est ce qu'une variable ? c'est un bloc memoire permettant de sauvegarder une valeur
+- Les types de bases : byte, short, int, long, float, double, char
+- Taille en memoire de chaque type
+- Declaration et Assignation
+- Conversion implicite double <- float <- long <- int <- short <- byte
+
+- Les Operateurs d'affectation : = (+=, -=, *=, /=)
+- Les Operateurs numériques : +, -, *, /, %
+- Portée des variables
+- Variable static
+
+- Syntaxe et Regles de nommage des variables (Camel Case): Les identificateurs ne peuvent pas être des mots clés du langage (int, if, else…). 
+Ils sont sensibles à la casse (majuscule, minuscule) et doivent obéir à certaines règles : ne pas commencer par un chiffre, 
+ne pas contenir certains signes… (l’ensemble des règles est plutôt complexe, mais en pratique tenez vous en aux caractères alphanumériques et tout ira bien).
+
+
+===== GLOSSAIRE :
+
+Type de base (Type primitifs)
+Declaration 
+Assignation
+Variable
+Syntaxe du langage
+Nomenclature Variable
+CamelCase VS PascalCase
+Identifiant
+Portée variable
+Transtypage ou Cast 
+Conversion implicite
+Conversion explicite
+ASCII table
+Unicode
+Concatenation
+Completion
+
+Exo 1 : "Identifiant valide" - Dire si la declaration est valide.
+
+1) int mfrp;
+2) int i;
+3) double solde_compte;
+4) double soldeCompte;
+5) bool 1Resultat;
+6) int NombreDeChats; 
+ 
+Exo 2 : "Type resultat d'instruction" Donner le resultat et le type du resultat pour chacune des instructions suivantes:
+ 
+1) 3 + 5 / 2
+2) 2 + ( 7 % 2 )
+3) 3 + ( -3 % 2 )
+4) 1.0 + 5 / 2
+5) 4 + 5.0 / 2
+7) 2.5f + 2
+8) 1.5f + 2.0
+
+Exo 3 : "Initialisation valide", dire si la valeur assignée est valide.
+
+1) float f2 = 1.0f;
+2) short s3 = 1.0;
+3) float f3 = 1.0;
+4) int i1 = 1;
+5) double d1 = 1;
+6) int i2 = 1.0f;
+7) double d2 = 1.0f;
+8) int i3 = 1.0;
+9) double d3 = 1.0;
+10) long l1 = 1;
+11) short s1 = 1;
+12) long l2 = 1.0f;
+13) float f1 = 1;
+14) short s2 = 1.0f;
+15) long l3 = 1.0;
+
+Exo 4 : Creer un nouveau projet Visual Code "CalculeTVA" et Ecrire un programme en suivant les instructions suivantes :
+(Note : Attention pour chaque variable bien choisir les types=
+
+- Declarer une variable reprensentant la TVA.
+- Affecter à cette variable la valeur 20.0 
+- Declarer une variable reprensentant la TVA de premiere necessité.
+- Affecter à cette variable la valeur 5.0
+
+- Declarer une variable representant le prix d'un produit 1 Hors Taxe (HT), affecter lui un prix de 19.64.
+- Declarer une variable representant la quantité du produit 1 et affecter lui une valeur.
+- Declarer une variable representant le prix d'un produit 2 Hors Taxe, affecter lui un prix de 254.50.
+- Declarer une variable representant la quantité du produit 2 et affecter lui une valeur.
+
+- Calculer et affecter à une variable pour chaque produit le prix Toutes Taxes Comprises (TTC) avec la variable TVA à 20%.
+- Calculer et affecter à une variale le prix pour chaque produit en fonction de la quantité.
+- Même chose pour la TVA à 5%.
+- Affiicher le résultat.
+
+- Calculer et affecter à une variable le total HT de tous les produits en fonction de leur quantité, puis le total TTC. 
+- Afficher le résultat.
+- Calculer et affecter à une variable le total des TVAs.
+- Affiicher le résultat.
+
+Exo 5 : Creer un nouveau projet Visual Code "CharacterValue" et Ecrire un programme 
+(Note : utiliser Console.ReadKey() et le retour de cette fonction ConsoleKeyInfo.)
+
+- Qui demande à l'utilisateur de taper un caractère
+- Qui affiche ensuite le caractère tapé est dit sa valeur en numérique.
+Ex : 
+- le programme affiche "Appuyer sur une touche : "
+- l'utilisateur appuye sur 'k'
+- le programme affiche : "Vous avez appuyé sur la touche k sa valeur numérique est de 75."
+
+Exo 6 : Creer un nouveau projet Visual Code "AgeDisplay" et Ecire un programme qui :
+(Note : utiliser Console.ReadLine() et int.Parse(string) pour transformer une string en int.)
+
+- Affiche : "Bienvenue sur notre programme, tapez votre nom :"
+- Récupère le nom tapé par l'utilisateur
+- Affiche : "Bonjour nomUtilisateur !"
+- Affiche ensuite : "Tapez votre age svp : "
+- Récupère l'age tapé par l'utilisateur dans une variable.
+- Calcule l'année de sa naissance à partir de l'age.
+- Affiche ensuite : "Vous êtes né l'année : anneeCalculee et vous avez ageUtilisateur."
+
