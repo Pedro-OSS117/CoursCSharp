@@ -21,10 +21,15 @@ Condition 1 | Condition 2 | Result
 	false   |	true	  |  false
 	false   |   false	  |  false
 
-- Instruction conditionnel
+- Instruction conditionnelle
 - Block de controle : if, else if, else
 - Dans les parenthèses on a besoin d'une instruction conditionnel
 
+Glossaire 
+- Instruction conditionnelle
+- Bloc conditionnel
+- Operateurs de comparaison
+- Operateurs de logiques
 
 Exemple 1 :
 
@@ -103,14 +108,13 @@ Exo : Ecrire un programme
 - Afficher la valeur de la vie
 
 Exo 2 : 
-Ajouter au programme précedent.
-
-Après modification de la vie faire un test sur la vie et afficher une couleur en fonction de sa valeur :
+Declarer une variable life et donner lui une valeur
+ensuite afficher une couleur en mot en fonction de sa valeur :
 0 ou inferieur : NOIR
 entre 1 et 20 : ROUGE
 entre 21 et 40 : ORANGE
 entre 41 et 60 : JAUNE
-entre 61 et 100 : VERT
+entre 61 et 100 ou superieur à 100 : VERT
 
 Exo 3 : Saison
 Ecrire un programme qui test une variable string contenant un mois, et qui affiche la saison correspondante
