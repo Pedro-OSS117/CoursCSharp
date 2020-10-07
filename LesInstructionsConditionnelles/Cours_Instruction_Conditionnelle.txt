@@ -1,0 +1,117 @@
+===== Les Instructions conditionnelles
+
+- les booleans
+- True or False
+- Affectation
+- Les opérateurs de comparaison : ==, !=, >=, >, <, <=
+- Les opérateurs logiques : ||(ou), &&(et), !(négation)
+Tableau des cas :
+
+OR - ||
+Condition 1 | Condition 2 | Result
+    true    | 	true	  |	 true
+    true	|	false	  |	 true
+	false   |	true	  |  true
+	false   |   false	  |  false
+
+AND - &&
+Condition 1 | Condition 2 | Result
+    true    | 	true	  |	 true
+    true	|	false	  |	 false
+	false   |	true	  |  false
+	false   |   false	  |  false
+
+- Instruction conditionnel
+- Block de controle : if, else if, else
+- Dans les parenthèses on a besoin d'une instruction conditionnel
+
+
+Exemple 1 :
+
+if (a == b) 
+{
+	printf ("les variables a et b sont ´egales\n");
+}
+Si a est ´egal `a b, on affiche la phrase ”les variables a et b sont ´egales”.
+ATTENTION : Ne pas confondre a == b avec a = b :
+– a == b est une comparaison qui v´erifie si a et b sont ´egaux.
+– a = b est une affectation, on affecte `a la variable a la valeur de la variable b.
+
+Exemple 2 :
+if (!(a == b)) 
+{
+	printf("les variables a et b ne sont pas ´egales \n");
+}
+A cause du NOT (!) qui inverse le r´esultat de l’expression (a == b), on affiche la phrase ”les variables a et b ne
+sont pas ´egales” si l’expression a == b n’est pas v´erifi´ee, en d’autres termes si a et b ne sont pas ´egaux.
+On peut aussi l'écrire :
+
+if (a != b) 
+{
+	printf("les variables a et b ne sont pas ´egales \n");
+}
+
+Exemple 3 :
+if ((a == b) || (a < b))
+{
+	printf("a n’est pas sup´erieur `a b \n");
+}
+Si a est ´egal `a b OU a est inf´erieur `a b, on affiche la phrase ”a n’est pas sup´erieur `a b”.
+
+Exemple 4 :
+if (a == b) 
+{
+	printf("les variables a et b sont ´egales \n");
+}
+else 
+{
+	printf("les variables a et b ne sont pas ´egales \n");
+}
+Si a est ´egal `a b, on af
+
+
+Exemple 5
+if((a == b) && (a < c))
+{
+	printf("les variables a et b sont égales ET a est inferieur à c\n");
+}
+else if((a == b) && (a > c))
+{
+	printf("les variables a et b sont égales ET a est supérieur à c\n");
+}
+else if(a == b) && (a == c))
+{
+	printf("les variables a, b et c sont égales\n");
+}
+else if(a != b && a != c && b != c)
+{
+	printf("les variables a, b et c ne sont pas égales\n");
+}
+
+
+Exo : Ecrire un programme
+
+- Declarer une variable qui represente la vie et initialiser la à 100 de valeur.
+- Declarer une variable qui represente l'etat invincible/non invincible et initialisée la à non invincible 
+- Declarer une variable dommage et intialiser la à 50
+
+- Appliquer les degats en testant si la vie est tjrs superieur à zero ET si l'etat n'est pas invincible
+- Afficher la valeur de la vie
+
+- Mettre la variable invincible dans l'état invincible.
+- Appliquer les degats en faisant les mêmes tests précédents
+- Afficher la valeur de la vie
+
+Exo 2 : 
+Ajouter au programme précedent.
+
+Après modification de la vie faire un test sur la vie et afficher une couleur en fonction de sa valeur :
+0 ou inferieur : NOIR
+entre 1 et 20 : ROUGE
+entre 21 et 40 : ORANGE
+entre 41 et 60 : JAUNE
+entre 61 et 100 : VERT
+
+Exo 3 : Saison
+Ecrire un programme qui test une variable string contenant un mois, et qui affiche la saison correspondante
+
