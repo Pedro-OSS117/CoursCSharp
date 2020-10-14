@@ -27,6 +27,11 @@ Ces variables existent en mémoire seulement le temps de l'execution de la fonct
 
 - Creation d'un nouveau fichier Helper (ou SetFunctions)
 
+Glossaire
+Signature/prototype
+Implementation
+
+
 Exo :
 V?F Toutes les fonctions doivent se terminer par une instruction `return.
 
@@ -65,5 +70,4 @@ Exo :
 Saisir l'année de naissance d'une personne.
 Afficher ensuite si la personne est mineure ou majeure suivant son année de naissance avec la fonction DetermineMajorité.
 Vous devez utiliser pour vous aider la fonction CalculAge qui calcule l'âge d'une personne en fonction de son année de naissance.
-On considère que l'on est toujours en 2015.
 L'appel et l'affichage se font dans la fonction Main.

@@ -97,7 +97,7 @@ else if(a != b && a != c && b != c)
 Exo : Ecrire un programme
 
 - Declarer une variable qui represente la vie et initialiser la à 100 de valeur.
-- Declarer une variable qui represente l'etat invincible/non invincible et initialisée la à non invincible 
+- Declarer une variable qui represente l'etat invincible/non invincible et initialiser la à non invincible 
 - Declarer une variable dommage et intialiser la à 50
 
 - Appliquer les degats en testant si la vie est tjrs superieur à zero ET si l'etat n'est pas invincible
