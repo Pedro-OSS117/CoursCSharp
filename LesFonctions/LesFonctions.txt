@@ -1,0 +1,69 @@
+====== Les Fonctions =====
+
+- Declaration - Signature/Prototype d'une fonction
+- Identifiant/Nom de la fonction
+- Paramètres de la fonction
+- Type de Retour de la fonction
+- void => pas de retour
+
+Une fonction avec un type de retour doit 
+ - doit se terminer par une instruction 'return'
+ - doit retourner un type compatible
+
+- Corps de la fonction 
+- Nomenclature : Pascal Case
+
+- On ne peut pas avoir deux fonctions de signature identique dans une même classe
+
+- Static : Global au programme
+variable et fonction static : accessibles partout dans le programme
+
+NomClass.nomVariable;
+NomClass.NomFonction();
+
+- Les parametres sont de nouvelles variables mise en memoire. 
+Ces variables existent en mémoire seulement le temps de l'execution de la fonction.
+(Les variables sont valident uniquement dans la portée où elles ont été déclaré)
+
+- Creation d'un nouveau fichier Helper (ou SetFunctions)
+
+Exo :
+V?F Toutes les fonctions doivent se terminer par une instruction `return.
+
+V?F Une méthode ayant pour type de retour void est appelée une procédure.
+
+V?F Lors d’un appel de fonction, la fonction appellée reçoit une copie des valeurs passées en paramètre.
+
+Exo : Trouvez les 3 erreurs dans le programme suivant :
+void Toto(int a, int b)
+{
+        int z = 7;
+		if(z < b)
+        {
+                int d = 11;
+                Afficher(d + a);
+        }
+		if(a > b)
+        {
+                int e = 11;
+                Afficher(e + d);
+        }
+        Afficher(a);
+        Afficher(z);
+        Afficher(e);
+}
+
+Exo transformer les exos précédents en fonction :
+- Calcule TVA en fonction d'une prix de produit + une quantité.
+- Afficher couleur en fonction d'une valeur entre 0 et 100.
+- Afficher une saison en fonction d'un mois.
+
+Exo :
+Faire une fonction qui calcule la moyenne et retourne le resultat
+
+Exo : 
+Saisir l'année de naissance d'une personne.
+Afficher ensuite si la personne est mineure ou majeure suivant son année de naissance avec la fonction DetermineMajorité.
+Vous devez utiliser pour vous aider la fonction CalculAge qui calcule l'âge d'une personne en fonction de son année de naissance.
+On considère que l'on est toujours en 2015.
+L'appel et l'affichage se font dans la fonction Main.
