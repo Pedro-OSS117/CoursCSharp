@@ -28,43 +28,36 @@ Ces variables existent en mémoire seulement le temps de l'execution de la fonct
 - Creation d'un nouveau fichier Helper (ou SetFunctions)
 
 Glossaire
-Signature/prototype
-Implementation
 
+Signature/prototype
+Identifiant
+Type de retour
+Paramètres
+Implementation/Corps fonction
+Static (pour une fonction)
+Static (pour une variable)
 
 Exo :
 V?F Toutes les fonctions doivent se terminer par une instruction `return.
 
-V?F Une méthode ayant pour type de retour void est appelée une procédure.
-
 V?F Lors d’un appel de fonction, la fonction appellée reçoit une copie des valeurs passées en paramètre.
 
-Exo : Trouvez les 3 erreurs dans le programme suivant :
-void Toto(int a, int b)
-{
-        int z = 7;
-		if(z < b)
-        {
-                int d = 11;
-                Afficher(d + a);
-        }
-		if(a > b)
-        {
-                int e = 11;
-                Afficher(e + d);
-        }
-        Afficher(a);
-        Afficher(z);
-        Afficher(e);
-}
+V?F "mafonction" est un identifiant valide pour une fonction.
+
+V?F Il n'y a pas de limite de parametre dans une fonction.
+
+V?F Le type de retour d'une fonction correspond au type du premier paramètre.
 
 Exo transformer les exos précédents en fonction :
 - Calcule TVA en fonction d'une prix de produit + une quantité.
 - Afficher couleur en fonction d'une valeur entre 0 et 100.
 - Afficher une saison en fonction d'un mois.
+- Afficher le signe chinois en fonction d'une année.
 
 Exo :
-Faire une fonction qui calcule la moyenne et retourne le resultat
+- Faire une fonction qui calcule la moyenne et retourne le resultat (total , nombreElement).
+- Faire une fonction qui calcule la surface d'un rectangle (largeur * hauteur).
+- Faire une fonction qui retourne un pourcentage en fonction d'une valeur et d'une valeur maximum representant 100%.
 
 Exo : 
 Saisir l'année de naissance d'une personne.
