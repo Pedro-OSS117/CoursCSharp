@@ -29,6 +29,7 @@ Ces variables existent en mémoire seulement le temps de l'execution de la fonct
 
 Glossaire
 
+PascalCase
 Signature/prototype
 Identifiant
 Type de retour
@@ -36,13 +37,18 @@ Paramètres
 Implementation/Corps fonction
 Static (pour une fonction)
 Static (pour une variable)
+Surcharge
 
 Exo :
 V?F Toutes les fonctions doivent se terminer par une instruction `return.
+Faux car si type de retour est 'void' pas de return necessaire
 
-V?F Lors d’un appel de fonction, la fonction appellée reçoit une copie des valeurs passées en paramètre.
+V?F Lors d’un appel de fonction, la fonction appellée reçoit une copie des 
+valeurs passées en paramètre.
+Vrai car une nouvelle plage de memoire est allouée.
 
 V?F "mafonction" est un identifiant valide pour une fonction.
+Faux car l'identifiant ne suit pas le PascalCase
 
 V?F Il n'y a pas de limite de parametre dans une fonction.
 
