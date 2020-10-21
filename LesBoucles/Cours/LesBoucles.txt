@@ -1,6 +1,91 @@
-====== Les Fonctions =====
+====== Les Boucles =====
+
+Les boucles permettent de rééxécuter des instructions.
+En CSharp, on dispose de 4 types de boucles pour programmer ce type de comportement :
 
 - for
 - while
 - do while
 - foreach
+
+
+Les boucles infinies :
+Attention aux boucles infinies, si le programme ne sort jamais de la boucle il sera bloqué dans une boucle infinie.
+Utiliser Ctrl-C dans le terminal si votre programme est bloqué dans une boucle infinie.
+
+
+Details d'une boucle for :
+
+for(//1 - Instruction d'initialisation de l'index ; // 2 - Instruction Conditionnelle; // 3 - Instruction executée à chaque fin de tour de boucle )
+{
+	// Instructions de la boucle
+}
+
+1 : Ici on initilise un index qui permettra de gérer le nombre de tour de boucle.
+2 : Ici on definie l'instruction conditionnelle qui va définir si on continue la boucle => dès qu'elle retourne false la boucle se termine.
+3 : Ici on definie une instruction qui sera éxécutée à la fin de chaque tour de boucle.
+
+Exemple :
+for(int i = 0; i < 2; i++)
+{
+	// Instructions de la boucle
+}
+
+
+Premier tour de boucle : i = 0
+- On initilise une variable i à 0 => true
+- On Test si i est strictement inferieur à 2
+- Si oui on entre dans la portée de la boucle et on execute les instructions (sinon la boucle se termine)
+- Après éxecution des instructions dans la boucle on éxécute i++; => i =1
+
+Deuxième tour de boucle : i = 1
+- On Test si i est inferieur à 2 => true
+- i est bien infirieur à 2 donc on éxécute les instructions de la portée
+- Après éxécution on éxécute i++; i = 2
+
+Troisième tour de boucle : i = 2
+- On Test si i est strictement inferieur à 2 => false
+- i n'est pas inferieur à 2 => la boucle se termine
+
+
+Details d'une boucle while
+
+while(// 1 - Instruction conditionnelle)
+{
+	Instructions de la boucle
+}
+
+1 : Cette instruction définie si on continue la boucle
+
+int i = 0;
+while(i < 2)
+{
+	i++;
+}
+
+Exo cours 1 : 
+Creer une fonction 'DisplayAllAtLine' qui prend en paramètre un int et affiche tous les nombres de 0 au nombre passé en paramètre
+Ex resultat si 4 est passé en paramètre :
+0
+1
+2
+3
+4
+
+Exo cours 2 :
+Creer une fonction 'DisplayBy3' qui prend en paramètre un int et affiche tous les nombres de 0 au nombre passé en paramètre tous les 3 nombres
+Ex resultat si 7 est passé en paramètre :
+0 
+3
+6
+
+Exo cours 3 :
+Creer une fonction 'IsPairOrImpair' qui prend en paramètre un int.
+La fonction doit afficher les nombres de 1 au nombre passé en paramètre et afficher s'ils sont pair ou impair
+Ex : 4 est passé en paramètre. Le programme affiche : 
+1 est impair
+2 est pair
+3 est impair
+4 est pair
+
+faire une version avec la boucle for et une version avec la boucle while
