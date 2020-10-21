@@ -1,0 +1,6 @@
+====== Les Fonctions =====
+
+- for
+- while
+- do while
+- foreach

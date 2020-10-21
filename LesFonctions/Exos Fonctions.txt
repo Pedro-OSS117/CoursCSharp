@@ -1,0 +1,31 @@
+Exo 1 transformer les exos précédents en fonction. Créer un projet "PreviousFunctions".
+Créer les fonctions dans le même projet et les utilisées dans la fonction Main du projet.
+
+
+- Calcule TVA en fonction d'une prix de produit + une quantité et affiche le nom du produit, le prix de base, le prix TTC.
+L'utiliser avec au moins deux produits.
+
+- Creer une fonction qui prend en parametre un caractère, affiche le caractère et sa valeur numérique.
+L'utiliser avec au moins deux caractères.
+
+- Creer une fonction qui affiche couleur en fonction d'une valeur entre 0 et 100.
+L'utiliser avec au moins deux valeurs.
+
+- Creer une fonction qui affiche une saison en fonction d'un mois.
+L'utiliser avec au moins deux mois.
+
+- Creer une fonction qui affiche le signe chinois en fonction d'une année.
+L'utiliser avec au moins deux années.
+
+Exo 2 : Créer un projet "UseReturn". Pour chaque fonction, faire deux utilisations dans la fonction Main.
+Afficher le retour de la fonction après l'avoir récupéré dans une variable.
+
+- Faire une fonction qui calcule la moyenne et retourne le resultat (total , nombreElement).
+- Faire une fonction qui calcule la surface d'un rectangle (largeur * hauteur).
+- Faire une fonction qui retourne un pourcentage en fonction d'une valeur et d'une valeur maximum representant 100%.
+
+Exo 3 : Créer un projet "AreYouMajor"
+Saisir l'année de naissance d'une personne.
+Afficher ensuite si la personne est mineure ou majeure suivant son année de naissance avec la fonction DetermineMajorité.
+Vous devez utiliser pour vous aider la fonction CalculAge qui calcule l'âge d'une personne en fonction de son année de naissance.
+L'appel et l'affichage se font dans la fonction Main.

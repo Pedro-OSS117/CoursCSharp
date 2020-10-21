@@ -51,22 +51,7 @@ V?F "mafonction" est un identifiant valide pour une fonction.
 Faux car l'identifiant ne suit pas le PascalCase
 
 V?F Il n'y a pas de limite de parametre dans une fonction.
+Vrai
 
 V?F Le type de retour d'une fonction correspond au type du premier paramètre.
-
-Exo transformer les exos précédents en fonction :
-- Calcule TVA en fonction d'une prix de produit + une quantité.
-- Afficher couleur en fonction d'une valeur entre 0 et 100.
-- Afficher une saison en fonction d'un mois.
-- Afficher le signe chinois en fonction d'une année.
-
-Exo :
-- Faire une fonction qui calcule la moyenne et retourne le resultat (total , nombreElement).
-- Faire une fonction qui calcule la surface d'un rectangle (largeur * hauteur).
-- Faire une fonction qui retourne un pourcentage en fonction d'une valeur et d'une valeur maximum representant 100%.
-
-Exo : 
-Saisir l'année de naissance d'une personne.
-Afficher ensuite si la personne est mineure ou majeure suivant son année de naissance avec la fonction DetermineMajorité.
-Vous devez utiliser pour vous aider la fonction CalculAge qui calcule l'âge d'une personne en fonction de son année de naissance.
-L'appel et l'affichage se font dans la fonction Main.
+Faux

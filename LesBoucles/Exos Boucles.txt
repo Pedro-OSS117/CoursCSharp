@@ -1,0 +1,54 @@
+Dans chaque exo, il faut utiliser des boucles !
+
+Exo 1
+Creer une fonction 'DisplayAllNumber' qui prend en paramètre un int.
+La fonction doit afficher tous les nombres de 0 à la valeur du paramètre sans aller à la ligne.
+Ex : 4 est passé en paramètre. Le programme affiche : 
+01234
+
+Exo 2
+Creer une fonction 'DisplayAllCharacter' qui prend en paramètre un int.
+La fonction doit afficher les caractères de valeur 33 à la valeur numerique + 33 du paramètre.
+(33 étant le premier caractère affichable dans la table ASCII, '!')
+Ex : 3 est passé en paramètre. le programme affiche :
+!
+"
+#
+
+Exo 3
+Creer une fonction 'DisplayAllPairNumber' qui prend en paramètre un int.
+La fonction doit afficher tous les nombres de 0 à la valeur du paramètre et si les nombres sont multiple de 2 et sans aller à la ligne.
+Ex : 11 est passé en paramètre. Le programme affiche : 
+0246810
+
+Exo 4
+Creer une fonction 'DisplayTriangle' qui prend en paramètre un int et qui affiche un figure comme suit :
+Exemple le programme prend en paramètre 4 et affiche :
+
+*
+**
+***
+****
+
+Exo 5
+Creer une fonction 'DisplayDiamond' qui prend en paramètre un int et affiche une figure comme suit :
+Exemple le programme prend en paramètre 5 et affiche :
+    *     
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+	
+Exemple le programme prend en paramètre 4 et affiche :
+   *     
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+	
