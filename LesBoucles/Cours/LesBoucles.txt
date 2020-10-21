@@ -64,7 +64,7 @@ while(i < 2)
 }
 
 Exo cours 1 : 
-Creer une fonction 'DisplayAllAtLine' qui prend en paramètre un int et affiche tous les nombres de 0 au nombre passé en paramètre
+Creer une fonction 'DisplayAllNumbers' qui prend en paramètre un int et affiche tous les nombres de 0 au nombre passé en paramètre
 Ex resultat si 4 est passé en paramètre :
 0
 1
