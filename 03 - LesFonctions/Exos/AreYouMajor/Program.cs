@@ -18,7 +18,7 @@ namespace AreYouMajor
                 // est "coucou" alors la fonction int.Parse(entry) créera une exception.
                 // Le try permet d'empecher l'erreur du programme
                 // Le catch permet d'executer des instructions spécifiques en cas d'exception 
-		// (on "catch" (attrape) l'exception pour la traiter).
+		        // (on "catch" (attrape) l'exception pour la traiter).
                 try
                 {
                     year = int.Parse(entry);
@@ -32,12 +32,15 @@ namespace AreYouMajor
                 if(year == -1)
                 {
                     Console.WriteLine($"{entry} is not valid for a birth year !");
+                    continue;
                 }
                 else
                 {
                     if(year > 2020 || year < 1900)
                     { 
                         Console.WriteLine($"{year} is not between 1900 and 2020 !");
+                        year = -1;
+                        continue;
                     }
                 }
             }
