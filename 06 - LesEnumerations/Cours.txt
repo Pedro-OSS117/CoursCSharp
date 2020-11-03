@@ -1,0 +1,85 @@
+1. Présentation
+
+Les énumérations en C# permettent de définir un ensemble de constantes qui sont liées entre elles.
+Le enum mot-clé est utilisé pour déclarer un énumération, un type distinct qui se compose d’un ensemble de constantes
+nommées appelées liste des énumérations.
+
+Les énumérations sont des constantes fortement typées. Ce sont essentiellement des types uniques qui vous permettent
+d’attribuer des noms symboliques.
+
+Dans la tradition C #, ils sont fortement typés, ce qui signie qu’un énoncé d’un type peut ne pas être implicitement attribué
+à un énoncé d’un autre type même si la valeur sous-jacente de leurs membres est la même.
+
+
+2. Déclaration
+la déclaration se fait de la manière suivante :
+
+public enum JourSemaine
+{
+	Lundi,
+	Mardi,
+	Mercredi,
+	Jeudi,
+	Vendredi,
+	Samedi,
+	Dimanche
+}
+
+public enum DoigtMain
+{
+	Pouce,
+	Index,
+	Majeur,
+	Annulaire,
+	Auriculaire
+}
+
+Par défaut, la première valeur de l’énumération est initialisée à zéro. Les constantes suivantes sont ensuite initialisées avec un incrément de un. La déclaration précédente aurait donc pu
+s’écrire:
+
+public enum JourSemaine : int
+{
+	Lundi = 0,
+	Mardi = 1,
+	Mercredi = 2,
+	Jeudi = 3,
+	Vendredi = 4,
+	Samedi = 5,
+	// Chacune de ces valeurs représente une constante. Elles obéissent aux règles du PascalCase
+	// : pas de chiffre au début, pas d’espace, pas de tiret ainsi qu’un certain nombre d’autres signes.
+	Dimanche = 6
+}
+
+La valeur d’un membre enum ne peut pas être modiée. Il se comporte comme une constante. Dans le programme ci-dessus, nous ne pouvons pas modier la valeur d’énum membre
+dimanche à partir de Main (). Il se comporte comme une constante.
+
+3. Assignation
+Pour assigner un enum, la syntaxe sera la suivante: monEnum = TypeEnum.Valeur;
+static void Main(string[] args)
+{
+	DoigtMain monDoigt;
+	monDoigt = DoigtMain.Index;
+}
+
+4. Utilisation de GetName
+Utiliser la méthode GetNames pour passer la liste des énumérateurs à l’aide de la boucle FOR-EACH .
+GetName accepte en second paramètre soit une variable du type sous-jacent de l’énumération, soit directement une constante nommée de celle-ci ; toute autre valeur entraînera la levée
+d’une exception. En outre, si la valeur passée en paramètre n’est pas incluse dans l’énumération comme le sont les valeurs fantômes, la chaîne de caractères résultant de l’opération aura la
+valeur null.
+const int valeurjour = 4;
+string troisiemejour = Enum.GetName(typeof(JourSemaine ), valeurjour ); // "Jeudi"
+const quatriemejour Vendredi = JourSemaine .Vendredi;
+string valeurjour = Enum.GetName(typeof(JourSemaine ), Vendredi ); // "Vendredi"
+
+5. Avantages de l’utilisation d’Enums
+Les énoncés sont fortement typés signie que l’énumération d’un type ne peut pas être assignée à un autre type.
+Les énumérations sont appelées constantes, de sorte que le code devient plus simple, ecace, plus facile à gérer et lisible. Vous devez donc simplement vous rappeler les noms réels et
+non les valeurs entières Enums consomme moins d’espace mémoire car les énums sont du type de valeur et sont attribués sur la pile.
+Les énumérations sont représentées sous forme de chaînes, mais traitées en nombre entier.
+Le type d’énumération par défaut est int, et d’autres types approuvés sont sbyte, byte, ushort, short, long, uint et ulong.
+L’énumération des drapeaux nous permet d’attribuer les valeurs multiples à un membre enum ou à un objet enum.
+
+6. Convertir une chaîne de caractères en valeur d’énumération
+Pour convertir la valeur de la chaîne d’entrée en un membre enum en utilisant la méthode Enum.Parse.
+La méthode Enum.Parse convertit les chaînes en un objet énuméré équivalent.
+La méthode Enum.Parse prend une chaîne et obtient l’énumération réelle du type d’énumération.

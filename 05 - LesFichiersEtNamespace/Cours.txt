@@ -1,0 +1,30 @@
+Les Fichiers et Les Namespaces
+
+- Namespace : les espaces de nom permettent de regrouper des classes dans un même ensemble.
+Dans le cours nous discuterons d'un exemple où l'on regroupe des fonctions d'aides dans un namespace 'Helper'
+
+- Synthax et Nomenclature :
+  => PascalCase
+  => NomNamespace.NomSousNamespace  
+  => nom explicite qui parle, choisi pour regrouper des comportements similaires.
+  
+- En c# un fichier correspond au minimum à une classe. Une classe est encadrer par un Namespace.
+Si la classe n'a pas de Namespace :
+=> elle est accesssible à tout le programme.
+=> et donc elle est chargée en mémoire tout le long de l'execution du programme.
+=> On ne peut pas avoir deux classes de même nom dans le même namespace.
+
+- Convention : 1 fichier = 1 namespace = 1 classe
+
+Exemple avec un fichier de base
+- Nouveau Fichier
+- Nouvelle classe sans namespace
+- Creation d'une fonction simple
+- Classe avec namespace
+- Fonction public/privée
+
+Exemple avec creation d'un Helper
+- Helper Input
+- Helper Compare
+
+
