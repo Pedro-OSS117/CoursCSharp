@@ -61,9 +61,9 @@ namespace AreYouMajor
             return 2020 - year;
         }
 
-        static bool DetermineMajorite(int age)
+        static bool DetermineMajorite(int age, int majority = 18)
         {
-            return age >= 18;
+            return age >= majority;
         }
     }
 }

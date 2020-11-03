@@ -48,10 +48,10 @@ namespace ExosBoucles
             Console.WriteLine(toDisplay);
         }
 
-        static void DisplayAllCharacter(int maxNumber)
+        static void DisplayAllCharacter(int maxNumber, int startIndex = 33)
         {
-            maxNumber += 33;
-            for(int i = 33; i <= maxNumber; i++)
+            maxNumber += startIndex;
+            for(int i = startIndex; i <= maxNumber; i++)
             {
                 Console.WriteLine((char)i);
             }
@@ -106,6 +106,7 @@ namespace ExosBoucles
                 toDisplay += '*';
             }
 
+            // Facultatif
             for(int j = maxNumber + 1; j < line + maxNumber; j++)
             {
                 toDisplay += ' ';
