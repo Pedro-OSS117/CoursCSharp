@@ -1,5 +1,7 @@
 1. Présentation
 
+doc microsoft : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum
+
 Les énumérations en C# permettent de définir un ensemble de constantes qui sont liées entre elles.
 Le enum mot-clé est utilisé pour déclarer un énumération, un type distinct qui se compose d’un ensemble de constantes
 nommées appelées liste des énumérations.
@@ -7,7 +9,7 @@ nommées appelées liste des énumérations.
 Les énumérations sont des constantes fortement typées. Ce sont essentiellement des types uniques qui vous permettent
 d’attribuer des noms symboliques.
 
-Dans la tradition C #, ils sont fortement typés, ce qui signie qu’un énoncé d’un type peut ne pas être implicitement attribué
+Dans la tradition C#, ils sont fortement typés, ce qui signie qu’un énoncé d’un type peut ne pas être implicitement attribué
 à un énoncé d’un autre type même si la valeur sous-jacente de leurs membres est la même.
 
 
