@@ -1,0 +1,75 @@
+1 - =================
+
+enum color
+{
+ rouge,
+ vert,
+ bleu
+}
+
+couleurc = couleur.rouge;
+Type t;
+t = c.GetType();
+string[ ]str;
+str = Enum.GetNames(t);
+Console.WriteLine(str[ 0 ]);
+
+Resultats ? :
+-1
+1
+la couleur est rouge
+0
+
+2 - =========================
+enum personne
+{
+ marie,
+ célibataire,
+ divorce,
+ vieilleFille
+}
+
+personne.marie= 10;
+Console.WriteLine(personne.célibataire);
+
+Propositions ? :
+A Le programme signale une erreur car un ENUM élément ne peut être attribué une valeur en dehors de la ENUM déclaration.
+B Le programme achera une valeur 1 .
+C Le programme achera une valeur 2 .
+D Le programme achera une valeur 11
+
+3 - =========================
+enum couleur: int
+{
+ rouge = -3,
+ vert,
+ bleu
+}
+Console.Write( (int) couleur.rouge + ", ");
+Console.Write( (int) couleur.vert+ ", ");
+Console.Write( (int) couleur.bleu );
+
+Propositions ? :
+A -3, -2, -1
+B Color.red, color.green, color.blue
+C 0, 1, 2
+D -3, 0, 1
+
+4 - =========================
+enum couleur: int
+{
+ rouge,
+ vert,
+ bleu= 5,
+ cyan,
+ magenta = 10,
+ jaune
+}
+Console.Write( (int) couleur.vert+ ", " );
+Console.Write( (int) couleur.jaune);
+
+Propositions ? :
+A 2, 6
+B 2, 11
+C Aucune de ces réponses
+D 1, 5
