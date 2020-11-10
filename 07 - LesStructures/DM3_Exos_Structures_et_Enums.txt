@@ -1,6 +1,8 @@
 ================== Règles =====================
 A Rendre dans un dossier DM3_EnumEtStructure.
 Doit être sur vos GitHub avant 10h Mardi 17 sinon -5 à chaque heure en plus.
+-0.2 points à chaque erreur de nomenclature.
+0 sur l'exo si le programme ne compile pas.
 
 ================== Exo 0 ===================== Creer un projet 'MonthToColor' 
 
@@ -10,9 +12,9 @@ Pour l'enumeration Couleur => Blanc, Vert, Jaune, Rouge
 Implementer un programme :
 1 - Qui demande d'entrer dans la console un mois ecrit (ou un int).
 2 - Puis qui donne cette entrée à une fonction qui retourne le mois sous forme d'enum de type Mois. (Il faut implementer cette fonction)
-3 - Puis qui donne cette enum à une fonction qui retourne à quelle saison appartient ce mois sous forme d'enum de type Saison. (Il faut aussi implementer cette fonction)
-4 - Puis qui donne cette enum à une fonction qui retourne une couleur en fonction de la saison sous forme d'enum de type Couleur. (Il faut aussi aussi implementer cette fonction)
-5 - Et on termine le programme en affichant (avec les valeurs récupérées) : Le mois de '' appartient à la saison '' et sa couleur est le ''.
+3 - Puis qui donne cette enum Mois à une fonction qui retourne à quelle saison appartient ce mois sous forme d'enum de type Saison. (Il faut aussi implementer cette fonction)
+4 - Puis qui donne cette enum Saison à une fonction qui retourne une couleur en fonction de la saison sous forme d'enum de type Couleur. (Il faut aussi aussi implementer cette fonction)
+5 - Et qui se termine en affichant (avec les valeurs récupérées) : Le mois de '' appartient à la saison '' et sa couleur est le ''.
 
 ================== Exo 1 ================== Creer un projet 'ValidInput'
 
@@ -35,7 +37,7 @@ Quand on appelle la fonction ToString() le retour doit être une string qui cont
 Initialiser les en leur donnant des valeurs differentes.
 Afficher leur valeur avec WriteLine.
 
-5 - Creer une fonction 'Translate' qui prend en entrée trois coordonnées et les ajoutes aux propriétés.
+5 - Creer une fonction 'Translate' qui prend en entrée trois coordonnées et les ajoutes aux trois propriétés du vector3.
 Utiliser la fonction Translate sur les deux variables déclarées.
 Afficher leur valeur avec WriteLine.
 
@@ -51,7 +53,7 @@ Afficher la distance entre les deux variables avec WriteLine.
 
 ================== Exo 3 ================== - Creer un projet 'LesFormes'
 Creer un fichier Formes.cs 
-Ne pas oublier pour que le fichier soit detecté par le projet de soit :
+Pour que le fichier soit detecté par le projet, ne pas oublier de faire de :
 - soit fermer/reouvrir le projet
 - soit Shift+Ctrl+P -> Reload Window
 
@@ -83,7 +85,7 @@ Exemple : cas ou typeForm est egal à TriangleRectangle alors on appelle Display
 
 5- Dans la fonction Main du fichier Program :
 Declarer et initialiser des variables de type Forme pour chaque type de forme et avec des tailles differentes.
-Afficher les toutes les variables.
+Afficher toutes les variables.
 
 Exemple pour une forme de taille 7 l'affichage sera (en fonction de typeForm) :
 
