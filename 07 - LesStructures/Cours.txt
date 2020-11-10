@@ -1,0 +1,83 @@
+============ Les Structures ================
+
+https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/builtin-types/struct
+
+https://openclassrooms.com/fr/courses/2818931-programmez-en-oriente-objet-avec-c/2819071-les-structures
+
+Les structures vont nous permettre de créer nos propres types complexes.
+Les structures sont les ancêtres des Classes. 
+Dans la programmation imperative elles permettent de créer des objets plus complexes en regroupant des propriétés et en créant des comportements particuliers via des Methodes ou Fonctions.
+A titre d'exemple, dans Unity vous utilisez beaucoup les Vector, ce sont des structures. 
+
+Les structures sont très optimisées en terme d'éxécution par rapport aux classes mais elles ont de nombreuses fonctionnalités en moins.
+
+========== 0) Declaration - Nomenclature
+
+- Utlisation du mot clef 'struct'.
+- Definition des propriétés d'une structure.
+- Le nom de la structure suis la nomanclature PascalCase.
+- Les propriétés de la structure suivent la nomanclature CamelCase.
+
+// Definition de la structure 
+public struct NomStructure
+{
+	// Definition de ses propriétés
+	public int prop1;
+	public int prop2;
+	private bool prop3;	
+	
+	public static int globalProp;
+	
+	public void FonctionStructure()
+	{
+		// Dans cette portée, on a accès aux propriétés de la structure (même les privées).
+		// On accède aux propriétés de l'instance de la structure avec laquelle on a appelé la fonction.
+		prop3 = false;
+	}
+	
+	public static void FonctionStaticStructure()
+	{
+		// Dans cette portée, on a accès a aucune propriété de la structure car cette fonction est global (static)
+	}
+}
+
+========== 1) Initialisation/Assignation - Le constructeur
+Pour initialisé une nouvelle structure, on declare une variable typé par cette structure.
+Puis on initialise la structure avec un des constructeurs disponibles.
+
+Si aucun constructeur n'a été implementé, alors la structure a ses propriétés initialisées par leur valeur par defaut.
+Il y a toujours un constructeur par defaut.
+
+Le constructeur est une fonction particulière qui n'a pas de retour dans sa signature.
+Elle est utilisée par le programme lors de la creation d'une structure.
+On l'appelle avec le mot clef 'new' NomStructure();
+
+Exemple :
+NomStructure nouvelleVarDeNotreStructure = new NomStructure();
+
+========== 2) Les fonctions pas static d'une structure
+
+- Les fonctions déclarées dans la portée de la definition de la structure,
+qui n'ont pas le mot static devant et qui sont public, sont accessible via une instance de la structure.
+
+Exemple (en partant de l'initialisation précédente):
+
+nouvelleVarDeNotreStructure.FonctionStructure();
+
+- Dans une fonction (non static), on a accès a toutes les propriétés de l'instance sur laquelle on a appellé la fonction.
+
+========== 3) Les fonctions static d'une structure
+
+Les fonctions déclarées dans la portée de la definition de la structure,
+qui ont le mot static devant et qui sont public, sont accessible le type de la structure.
+
+Exemple :
+NomStructure.FonctionStaticStructure();
+
+========== 4) Les propriétés static
+Les propriétés static d'une structure sont globales à toutes les structures;
+On y accède comme suis :
+NomStructure.globalProp = 2;
+
+
+

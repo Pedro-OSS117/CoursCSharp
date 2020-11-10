@@ -1,0 +1,158 @@
+================== Règles =====================
+A Rendre dans un dossier DM3_EnumEtStructure.
+Doit être sur vos GitHub avant 10h Mardi 17 sinon -5 à chaque heure en plus.
+
+================== Exo 0 ===================== Creer un projet 'MonthToColor' 
+
+0 - Declarer les trois enums Mois, Saison, Couleur et définir leurs valeurs. 
+Pour l'enumeration Couleur => Blanc, Vert, Jaune, Rouge
+
+Implementer un programme :
+1 - Qui demande d'entrer dans la console un mois ecrit (ou un int).
+2 - Puis qui donne cette entrée à une fonction qui retourne le mois sous forme d'enum de type Mois. (Il faut implementer cette fonction)
+3 - Puis qui donne cette enum à une fonction qui retourne à quelle saison appartient ce mois sous forme d'enum de type Saison. (Il faut aussi implementer cette fonction)
+4 - Puis qui donne cette enum à une fonction qui retourne une couleur en fonction de la saison sous forme d'enum de type Couleur. (Il faut aussi aussi implementer cette fonction)
+5 - Et on termine le programme en affichant (avec les valeurs récupérées) : Le mois de '' appartient à la saison '' et sa couleur est le ''.
+
+================== Exo 1 ================== Creer un projet 'ValidInput'
+
+- Creer une fonction qui prend en entrée un parametre de type ConsoleKey (enumeration de system)
+- La fonction doit demander de taper sur 4 touches differentes (exemple ArrowLeft, ArrowRight, ArrowUp, ArrowDown)
+- La fonction retourne true si l'input est bien egal à une des 4 touches, sinon false
+- Appeler la fonction dans main et la rappeler tant que l'input n'est pas valide, sinon afficher : "Bravo vous savez appuyer sur les touches autorisées :)!"
+
+================== Exo 2 ================== Creer un projet 'Vector3'
+
+1 - Declarer une structure 'Vector3' ayant trois propriétés public de type float x, y ,z (les coordonnées du Vecteur).
+
+2 - Creer un constructeur qui prend en entrée les trois coordonnées et qui initialise les propriétés de la structure.
+
+3 - Surcharger la fonction ToString() 
+Quand on appelle la fonction ToString() le retour doit être une string qui contient : "{x, y, z}"
+"{0, 2, 1}" (exemple pour un vector3 initialisé à x = 0, y = 2 et z = 1).
+
+4 - Declarer 2 variables de type Vector3 dans Main.
+Initialiser les en leur donnant des valeurs differentes.
+Afficher leur valeur avec WriteLine.
+
+5 - Creer une fonction 'Translate' qui prend en entrée trois coordonnées et les ajoutes aux propriétés.
+Utiliser la fonction Translate sur les deux variables déclarées.
+Afficher leur valeur avec WriteLine.
+
+5 - Creer une fonction 'Longueur' qui retourne la longeur du vecteur.
+Formule longueur = Math.Sqrt(x² + y² + z²)
+Utiliser la fonction Longueur sur les deux variables déclarées.
+Afficher la longeur de chacune avec WriteLine.
+
+6 - Creer une fonction static 'Distance' qui retourne la distance entre 2 Vector3.
+Formule distance = Math.Sqrt((x2 - x1)² + (y2 - y1)² + (z2 - z1)²)
+Utiliser la fonction Distance sur les deux variables déclarées.
+Afficher la distance entre les deux variables avec WriteLine.
+
+================== Exo 3 ================== - Creer un projet 'LesFormes'
+Creer un fichier Formes.cs 
+Ne pas oublier pour que le fichier soit detecté par le projet de soit :
+- soit fermer/reouvrir le projet
+- soit Shift+Ctrl+P -> Reload Window
+
+1 - Dans Forme.cs, declarer une enumeration 'TypeForme' representant les différentes formes possibles :
+TriangleRectangle
+TriangleIsocele
+Diamant
+FauxCarre
+VraiCarre
+DiamondSquare
+
+2 - Dans Forme.cs, Declarer une structure 'Forme'.
+Ajouter les propriétés private suivantes :
+- une propriété 'typeForm' de type TypeForme.
+- une propriété 'taille' de type int.
+
+3 - Declarer et implementer le constructeur de la structure 'Forme'.
+Le constructeur prend en entrée le type et la taille et initialise les propriétés de la structure.
+
+4 - Surcharger et Implementer la fonction ToString()
+La fonction doit afficher la forme dans la console en fonction de typeForm. (override de ToString()).
+
+Il ya donc 6 versions de l'affichage à faire, une par valeur de l'enum TypeForm.
+Voir la fin du fichier pour l'affichage à suivre pour chaque forme.
+
+Conseil : faire un switch ou un if sur le type de la forme. 
+À partir de chaque cas appeler la fonction correspondante. 
+Exemple : cas ou typeForm est egal à TriangleRectangle alors on appelle DisplayTriangleRectangle.
+
+5- Dans la fonction Main du fichier Program :
+Declarer et initialiser des variables de type Forme pour chaque type de forme et avec des tailles differentes.
+Afficher les toutes les variables.
+
+Exemple pour une forme de taille 7 l'affichage sera (en fonction de typeForm) :
+
+TriangleRectangle
+*
+**
+* *
+*  *
+*   *
+*    *
+*******
+
+TriangleIsocele
+      *
+     * *
+    *   *
+   *     *
+  *       *
+ *         *
+*************
+
+Diamant
+      *
+     * *
+    *   *
+   *     *
+  *       *
+ *         *
+*           *
+ *         *
+  *       *
+   *     *
+    *   *
+     * *
+      *
+	  
+FauxCarre
+*********
+*       *
+*       *
+*       *
+*       *
+*       *
+*       *
+*       *
+*********
+
+VraiCarre
+* * * * * * * *
+*             *
+*             *
+*             *
+*             *
+*             *
+*             *
+*             *
+* * * * * * * *
+ 
+Diamond Square
+**************
+*    * *     *
+*   *   *    *
+*  *     *   *
+* *       *  *
+**         * *
+*           **
+**         * *
+* *       *  *
+*  *     *   *
+*   *   *    *
+*    * *     *
+**************

@@ -10,16 +10,3 @@ La fonction doit retourner le resultat de l'operation entre les
 deux variables numeriques.
 L'operation est choisie en fonction du paramètre de 
 type enum 'Operation' (Conseil Utiliser un switch)
-
-Exo 2
-Revoir les exos précedents : Couleur, Saison, Mois
-
-Declarer les trois enums et définir leurs valeurs. 
-Pour l'enumeration Couleur => Blanc, Vert, Jaune, Rouge
-
-Faire un programme :
-qui demande d'entrer dans la console un mois ecrit (ou un int)
-puis qui transforme cette entrée en une enum de type Mois via une fonction
-puis qui donne cette enum à une fonction qui retourne à quelle saison appartient ce mois sous forme d'enum de type Saison
-puis qui donne cette enum à une fonction qui retourne une couleur en fonction de la saison sous forme d'enum de type Couleur
-et on termine en affichant : Le mois de '' appartient à la saison '' et sa couleur est le ''.

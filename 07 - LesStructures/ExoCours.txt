@@ -1,0 +1,28 @@
+Exo --- Les Points
+
+0 - Declarer une structure 'Point' avec les propriétés public suivantes :
+- int x
+- int y
+- string name
+ 
+1 - Creer deux constructeurs :
+- Le premier qui demande en entrée les valeurs de x et y, et qui assigne un nom par defaut (Default Point par exemple)
+- Le deuxieme qui en plus des coordonnées, oblige à passer en parametre le nom du point.
+
+2 - Surcharger et implementer la fonction d'affichage ToString() de la structure.(utiliser le mot clef override)
+Quand on appelle la fonction ToString() le retour doit être une string qui contient : "Le point a comme coordonnée : {0, 1}" (exemple pour un point initialisé à x = 0 et y = 1)
+
+3 - Creer la fonction 'Longeur' qui retourne la longeur du vecteur que represente le point.
+Formule longeur du vecteur d'un point
+longueur = Math.Sqrt(x² + y²)
+
+4 - Creer une fonction static 'Distance' qui retourne la distance entre deux points
+
+Formule de la distance entre deux points : 
+Pour un point1 de coordonnées x1 et y1 et un point2 de coordonnées x2 et y2 la formule est :
+distance = Math.Sqrt((x1 - x2)² + (y1 - y2)²)
+
+5 - Creer une fonction static 'PointDirection' qui retourne sous forme de point le vecteur direction entre deux points.
+Pour un point1 de coordonnées x1 et y1 et un point2 de coordonnées x2 et y2 le vecteur direction retourné à pour coordonnée x = x2 - x1 et y = y2 - y1
+
+6 - Utiliser et tester toutes ces fonctions dans Main
