@@ -7,11 +7,13 @@ namespace FicheIdentite
         static void Main(string[] args)
         {
             // On change la majorité pour tout le programme
-            // FicheIdentite.majority = 21;
+            FicheIdentite.majority = 21;
             
             // On initialise la variable avec le constructeur par defaut  
             FicheIdentite personne1 = new FicheIdentite();
-            Console.WriteLine(personne1.ToString());
+
+            string displayPersonne = personne1.ToString();
+            Console.WriteLine(displayPersonne);
             personne1.prenom = "Pepin";
             personne1.nom = "LeBref";
             personne1.SetAge(10);
@@ -19,7 +21,7 @@ namespace FicheIdentite
 
             // On initialise la variable avec la surcharge du constructeur  qu'on a implementer
             FicheIdentite personne2 = new FicheIdentite(20, "Bob", "Morane", "Aventurier", Jour.Mardi, 10, Mois.Juillet, 1959);
-            Console.WriteLine(personne2.ToString());
+            Console.WriteLine(personne2);
 
             if (personne1.IsMajor())
             {
@@ -96,7 +98,7 @@ namespace FicheIdentite
                 jourDenaissance = jour;
                 this.valeurJour = valeurJour;
                 moisDeNaissance = mois;
-                anneeDeNaissance = age;
+                anneeDeNaissance = annee;
                 howManyBeforeMajor = 0;
 
                 CalculateHowManyBeforeMajor();
@@ -105,12 +107,12 @@ namespace FicheIdentite
             public void SetAge(int newAge)
             {
                 age = newAge;
-                CalculateHowManyBeforeMajor();
-            }
+                if(age < 0)
+                {
+                    age = 0;
+                }
 
-            public bool DidHaveAJob()
-            {
-                return profession != "";
+                CalculateHowManyBeforeMajor();
             }
 
             private void CalculateHowManyBeforeMajor()
@@ -141,6 +143,12 @@ namespace FicheIdentite
                 return howManyBeforeMajor;
             }
 
+            public bool DidHaveAJob()
+            {
+                return profession != "";
+            }
+
+            // Override de la fonction ToString pour avoir un meilleur affichage
             public override string ToString()
             {
                 string toDisplay = $"{nom} {prenom}";

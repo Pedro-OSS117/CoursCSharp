@@ -3,6 +3,7 @@ A Rendre dans un dossier DM3_EnumEtStructure.
 Doit être sur vos GitHub avant 10h Mardi 17 sinon -5 à chaque heure en plus.
 -0.2 points à chaque erreur de nomenclature.
 0 sur l'exo si le programme ne compile pas.
+https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/inside-a-program/coding-conventions
 
 ================== Exo 0 ===================== Creer un projet 'MonthToColor' 
 

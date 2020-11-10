@@ -10,7 +10,7 @@ Exo --- Les Points
 - Le deuxieme qui en plus des coordonnées, oblige à passer en parametre le nom du point.
 
 2 - Surcharger et implementer la fonction d'affichage ToString() de la structure.(utiliser le mot clef override)
-Quand on appelle la fonction ToString() le retour doit être une string qui contient : "Le point a comme coordonnée : {0, 1}" (exemple pour un point initialisé à x = 0 et y = 1)
+Quand on appelle la fonction ToString() le retour doit être une string qui contient : "Le point a comme coordonnées : {0, 1}" (exemple pour un point initialisé à x = 0 et y = 1)
 
 3 - Creer la fonction 'Longeur' qui retourne la longeur du vecteur que represente le point.
 Formule longeur du vecteur d'un point
