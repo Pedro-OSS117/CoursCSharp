@@ -1,0 +1,28 @@
+Exo 1 - Display Tab
+Creer une fonction qui parcourt un tableau et qui affiche chacune de ses valeurs.
+
+Exo 2 - Total tab
+Creer une fonction qui retourne le total des valeurs d'un tableau (int et float)
+
+Exo 2 Bis - Moyenne tab
+Creer une fonction qui retourne la moyenne des valeurs d'un tableau (utiliser la fonction précédente)
+
+Exo 3 - Insert Tab
+Creer une fonction qui prend deux tableaux en entrée et un index
+La fonction insert les valeurs du deuxième dans le premier à partir de l'index passé en paramètre.
+
+Exo 4 - Recherche value
+Creer une fonction qui retourne
+-  -1 si le tableau ne contient pas la valeur passée en paramètre.
+- l'index de la valeur dans le tableau, si le tableau contient la valeur passée en paramètre.
+
+Exo 5 - Nombre d'occurence d'une valeur
+Creer uen fonction qui retourne le nombre d'occurence d'une valeur passée en paramètre.
+
+Exo 6 - Max et Min valeur dans un tab
+1 - Creer une fonction qui retourne le min des valeurs d'un tableau
+2 - Creer une fonction qui retourne le max des valeurs d'un tableau
+
+Exo 7 - Random alphabet tab et tri
+- Creer une fonction qui créer un tableau avec toutes les caractères de l'alphabet en désordre
+- Creer une fonction qui prend un tableau de char en entrée, et qui le tri (ordre de l'alphabet)

@@ -1,0 +1,51 @@
+============ Les Tableaux ================
+
+En utilisant un type existant, le langage permet de créer des tableaux. 
+Un tableau peut être vu comme une liste, un vecteur ou une matrice d’éléments du même type. 
+Chaque case ou cellule d’un tableau stocke un élément du type donné.
+
+========== 0) Déclaration et création
+
+Etant donné un type T, la notation T[] désigne le nouveau type tableau d’éléments de type T. 
+Par exemple int[] désigne le type tableau d’entiers qui est différent du type entier. 
+On peut déclarer des variables avec ce type de données.
+
+Pour créer un tableau, on utilise l’opérateur new. Les tableaux sont de type référence.
+
+Tableaux Syntaxe : 
+
+TypeDesElements[ ] monTableau1; // déclaration d'un tableau
+TypeDesElements[ ] monTableau2 = new TypeDesElements [tailleDuTableau]; // déclaration et création d'un tableau
+int[ ] monTableau3 = {1, 5, 6, 7}; // déclaration d'un tableau et initialisation explicite
+
+Les variables de type tableau sont commes les autres : elles doivent être initialisées avant d’être utilisées. 
+Lors de la création d’un tableau, chaque cellule du nouveau tableau est initialisée par défaut. 
+Ainsi, si vous créez un tableau d’entiers, chaque case sera mise à zéro.
+
+========== 1) Accès aux éléments d’un tableau => '[]'
+
+Les cases d’un tableau sont numérotées de 0 à la taille du tableau moins un. Le numéro d’une case est appelé son indice et permet d’accéder à cette case.
+
+Syntaxe
+
+int [] monTableau1 = {1, 2, 3};
+monTableau1[0] = 4; //modification de la valeur de la case d'indice 0: monTableau1 = {4, 2, 3}
+int a = monTableau1[2]; // lecture de la valeur de la dernière case du tableau: a = 3
+
+========== 2) Taille d’un tableau => 'Length'
+
+Pour connaitre la taille d’un tableau on utilise la propriété Length:
+
+int [] monTableau1 = {1, 2, 3};
+int taille = monTableau1.Length; // taille = 3
+
+
+========== 3) Tableau = Reference
+
+On a appris que lorsqu'on passe en paramètre dans une fonction, une copie de la variable est faite (en mémoire une nouvelle place est prise). 
+Cela concerne toutes les variables typées par les types de base (int, float, string, char, enum, etc)
+
+Pour un tableau ce n'est pas le cas. Lorsqu'on passe en paramètre un tableau, c'est bien directement le tableau qui est passé en paramètre.
+Pourquoi : une variable de type tableau est un pointeur vers une adresse en memoire.
+Si on déclare une variable int[] tableauEntier = new int[3]; la variable tableauEntier est en fait une adresse (un pointeur) et non une valeur.
+Cette adresse pointe vers la plage mémoire où tous les int existent.
