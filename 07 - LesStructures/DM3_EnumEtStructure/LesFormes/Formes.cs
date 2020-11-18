@@ -2,6 +2,8 @@ namespace LesFormes
 {
     public struct Forme
     {
+        public static char defaultMainChar = '*';
+
         public enum TypeForme
         {
             TriangleRectangle,
@@ -14,7 +16,8 @@ namespace LesFormes
 
         private int taille;
         private TypeForme typeForm;
-
+        private char mainChar;
+        
         public Forme(int taille, TypeForme typeForme)
         {
             this.taille = taille;
@@ -24,6 +27,19 @@ namespace LesFormes
             }
 
             this.typeForm = typeForme;
+            mainChar = defaultMainChar;
+        }
+
+        public void SetMainChar(char newMainChar)
+        {
+            if(newMainChar == ' ')
+            {
+                mainChar = defaultMainChar;
+            }
+            else
+            {
+                mainChar = newMainChar;
+            }
         }
 
         public override string ToString()
@@ -68,16 +84,16 @@ namespace LesFormes
         private string ToStringTriangleRectangle()
         {
             // Première ligne
-            string toDisplay = "\n*";
+            string toDisplay = "\n" + mainChar;
             // Lignes du milieu
             for (int i = 2; i < taille; i++)
             {
-                toDisplay += "\n*"+ ToStringLineChar(i - 1, ' ') + "*";
+                toDisplay += "\n" + mainChar + ToStringLineChar(i - 1, ' ') + mainChar;
             }
             if (taille > 1)
             {
                 // Dernière ligne
-                toDisplay += "\n" + ToStringLineChar(taille + 1, '*');
+                toDisplay += "\n" + ToStringLineChar(taille + 1, mainChar);
             }
             return toDisplay;
         }
@@ -95,7 +111,7 @@ namespace LesFormes
             // Dernière ligne
             if (taille > 1)
             {
-                toDisplay += "\n" + ToStringLineChar(taille * 2 - 1, '*');
+                toDisplay += "\n" + ToStringLineChar(taille * 2 - 1, mainChar);
             }
             return toDisplay;
         }
@@ -127,7 +143,7 @@ namespace LesFormes
             {
                 if (j == startIndex || j == endIndex - 1)
                 {
-                    toDisplay += '*';
+                    toDisplay += mainChar;
                 }
                 else
                 {
@@ -143,12 +159,12 @@ namespace LesFormes
         private string ToStringFauxCarre()
         {
             string toDisplay = "";
-            toDisplay += "\n" + ToStringLineChar(taille + 2, '*');
+            toDisplay += "\n" + ToStringLineChar(taille + 2, mainChar);
             for (int i = 1; i <= taille; i++)
             {
-                toDisplay += "\n" + "*" + ToStringLineChar(taille, ' ') + "*";
+                toDisplay += "\n" + mainChar + ToStringLineChar(taille, ' ') + mainChar;
             }
-            toDisplay += "\n" + ToStringLineChar(taille + 2, '*');
+            toDisplay += "\n" + ToStringLineChar(taille + 2, mainChar);
             return toDisplay;
         }
 
@@ -159,7 +175,7 @@ namespace LesFormes
             toDisplay += "\n" + DisplayLineVraiCarre(taille);
             for (int i = 1; i <= taille; i++)
             {
-                toDisplay += "\n" + "*" + ToStringLineChar(taille * 2 + 1, ' ') + "*";
+                toDisplay += "\n" + mainChar + ToStringLineChar(taille * 2 + 1, ' ') + mainChar;
             }
             toDisplay += "\n" + DisplayLineVraiCarre(taille);
             return toDisplay;
@@ -167,10 +183,10 @@ namespace LesFormes
 
         private string DisplayLineVraiCarre(int sizeLine)
         {
-            string toDisplay = "*";
+            string toDisplay = mainChar.ToString();
             for (int j = 1; j <= sizeLine + 1; j++)
             {
-                toDisplay += " *";
+                toDisplay += " " + mainChar;
             }
             return toDisplay;
         }
@@ -179,7 +195,7 @@ namespace LesFormes
         private string ToStringDiamantCarre()
         {
             string toDisplay = "";
-            toDisplay += "\n" + ToStringLineChar(taille * 2 - 1, '*');
+            toDisplay += "\n" + ToStringLineChar(taille * 2 - 1, mainChar);
 
             for (int i = 2; i < taille; i++)
             {
@@ -193,7 +209,7 @@ namespace LesFormes
                 toDisplay += "\n" + ToStringDiamantCarreLine(taille - 1, i);
             }
 
-            toDisplay += "\n" + ToStringLineChar(taille * 2 - 1, '*');
+            toDisplay += "\n" + ToStringLineChar(taille * 2 - 1, mainChar);
             return toDisplay;
         }
 
@@ -202,7 +218,7 @@ namespace LesFormes
                 string toModify = DisplayLineTriangleWithHole(size, indexLine);
                 toModify = toModify.Remove(0, 0);
                 toModify = toModify.Remove(toModify.Length - 1, 0);
-                toModify = "*" + toModify + "*";
+                toModify = mainChar + toModify + mainChar;
                 return toModify;
         }
     }

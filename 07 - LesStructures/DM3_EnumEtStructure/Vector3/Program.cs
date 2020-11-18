@@ -61,6 +61,7 @@ namespace Vector3
                 return MathF.Sqrt(x*x + y*y + z*z);
             }
 
+            /*
             public float Distance(Vector3 vectorToCalculate)
             {
                 float valX = (vectorToCalculate.x - x);
@@ -68,7 +69,7 @@ namespace Vector3
                 float valZ = (vectorToCalculate.z - z);
 
                 return MathF.Sqrt(valX*valX + valY*valY + valZ*valZ);
-            }
+            }*/
 
             public static float Distance(Vector3 v1, Vector3 v2)
             {

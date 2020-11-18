@@ -9,8 +9,10 @@ namespace LesFormes
             Forme triangleRectangle = new Forme(7, Forme.TypeForme.TriangleRectangle);
             Console.WriteLine(triangleRectangle);
 
+            Forme.defaultMainChar = 'v';
             
             Forme triangleIsocele = new Forme(8, Forme.TypeForme.TriangleIsocele);
+            triangleIsocele.SetMainChar('0');
             Console.WriteLine(triangleIsocele);
 
             
