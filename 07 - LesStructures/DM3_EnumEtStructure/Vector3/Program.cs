@@ -25,14 +25,18 @@ namespace Vector3
 
             float distance = Vector3.Distance(vector1, vector2);
             Console.WriteLine("\nDistance entre vector 1 et vector 2 : " + distance);
+
+            distance = vector2.Distance(vector1);
+            Console.WriteLine("\nDistance entre vector 1 et vector 2 : " + distance);
         }
 
-        struct Vector3
+        public struct Vector3
         {
-            float x;
-            float y;
-            float z;
+            public float x;
+            public float y;
+            public float z;
 
+            // Constructeur
             public Vector3(float x, float y, float z)
             {
                 this.x = x;
@@ -55,6 +59,15 @@ namespace Vector3
             public float Longueur()
             {
                 return MathF.Sqrt(x*x + y*y + z*z);
+            }
+
+            public float Distance(Vector3 vectorToCalculate)
+            {
+                float valX = (vectorToCalculate.x - x);
+                float valY = (vectorToCalculate.y - y);
+                float valZ = (vectorToCalculate.z - z);
+
+                return MathF.Sqrt(valX*valX + valY*valY + valZ*valZ);
             }
 
             public static float Distance(Vector3 v1, Vector3 v2)

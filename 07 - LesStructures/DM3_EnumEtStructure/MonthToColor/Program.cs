@@ -7,11 +7,20 @@ namespace MonthToColor
     {
         static void Main(string[] args)
         {
+            // Fonction afficher les valeurs possibles
             string text = GetTextToDisplay();
+            // Helper qui permet de recuperer une valeur entre un min et un max
+            // Le helper continue de demander si valeur non valide
             int valueChoosen = HelperInput.ReadInt(1, 12, text);
+
+            // Cast la valeur recupérée en int en enum Mois
             Mois month = (Mois)valueChoosen;
+
+            // Cas classique d'utilisation du switch sur une enum
             Saison season = GetSaisonFromMois(month);
-            ColorSaison color = GetColorFromSaison(season);
+
+            ColorSaison color =  (ColorSaison)season;  //GetColorFromSaison(season);
+            
             Console.WriteLine($"Le mois de {month} appartient à la saison {season} et sa couleur est le {color}");
         }
 
@@ -85,7 +94,8 @@ namespace MonthToColor
 
         static ColorSaison GetColorFromSaison(Saison season)
         {
-            return (ColorSaison)(int)season;
+            int valeurEnInt = (int)season;
+            return (ColorSaison)valeurEnInt;
         }
     }
 }
