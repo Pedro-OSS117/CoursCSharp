@@ -1,0 +1,67 @@
+Rendu le 
+
+Exo 1 - Palindromes
+- Creer une fonction qui prend en entrée une string et dit si la string est un palindrome. (Indice : utiliser la fonction ToCharArray des string)
+Palindrome : un texte ou un mot dont l'ordre des lettres reste le même qu'on le lise de gauche à droite ou de droite à gauche.
+Exemple de palindrome : "elle", "Tu l'as trop écrasé César ce Port-Salut", "Dogma I am God"
+
+Exo 2 - Random alphabet tab et tri
+- Creer une fonction qui créer un tableau avec tous les caractères de l'alphabet en désordre.
+- Creer une fonction qui prend un tableau de char en entrée et qui le tri par ordre alphabetique.
+
+Exo 3 - Tri tableau string
+- Creer une fonction qui prend en entrée un tableau de string
+- Après être passé par la fonction le tableau doit contenir les strings triés par ordre alphabetique
+
+Exo 4 - Le pendu 
+Principe du pendu : 
+A chaque partie, un mot random est choisi. Le joueur doit trouver le mot en proposant des lettres.
+Le joueur a un nombre de porpositions limités.
+Difficulté : la dificulté dépend de la longeur du mot et du nombre de coups disponibles.
+
+Déroulé d'une partie :
+Afficher un menu qui propose au joueur au minimum deux difficultés : Normale, Difficile
+Normale : mot entre 4 et 6 lettres, 15 coups
+Difficile : mot entre 8 et 10 lettres et 12 coups
+Après le choix de la difficulté le programme choisi un mot aléatoirement parmis un lot de mots (tableau de string).
+Ensuite on affiche à chaque tour:
+- l'etat du pendu en fonction des coups
+- le nombre de coups restant
+- l'etat du mot à trouver 
+
+Déroulé d'un tour :
+A chaque tour, le joueur peut entrer une lettre ou un mot entier.
+Lorsqu'on joue au pendu, il est possible de proposer le mot entier plutôt qu'une seule lettre.
+Gérer la possibilité d'entrer un mot entier pour le joueur.
+A chaque tour, le programme affiche le mot en cachant les lettres non trouvées : 
+Exemple avec le mot "bonjour", le joueur a trouvé n et u :
+**n**u*
+
+Lorsque le joueur a entré sa lettre ou son mot il appuie sur entrer,
+le programme decremente le nombre de coups et valide si la lettre est dans le mot (ou si le mot proposé est le bon).
+- si oui on ajoute la lettre dans l'affichage
+- sinon on ajoute un element à l'affichage du pendu
+
+Fin de partie :
+A chaque tour il faut gérer :
+si le joueur peut continuer
+si le joueur a perdu
+si le joueur a gagné => afficher le mot trouvé et le nombre de coups utilisés pour le trouver.
+
+Inventer un affichage original pour le pendu.
+Idée d'affichage pendu pour une partie à 12 coups (Difficile).
+
+_ _0_ _
+   |
+   |
+   |
+  / \
+ /   \
+ 
+ ou 
+   _ _
+ |   |
+    _O_
+ |   |
+    / \
+ |

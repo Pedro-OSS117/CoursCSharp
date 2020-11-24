@@ -17,12 +17,13 @@ Creer une fonction qui retourne
 - l'index de la valeur dans le tableau, si le tableau contient la valeur passée en paramètre.
 
 Exo 5 - Nombre d'occurence d'une valeur
-Creer uen fonction qui retourne le nombre d'occurence d'une valeur passée en paramètre.
+Creer une fonction qui retourne le nombre d'occurence d'une valeur passée en paramètre.
 
 Exo 6 - Max et Min valeur dans un tab
 1 - Creer une fonction qui retourne le min des valeurs d'un tableau
 2 - Creer une fonction qui retourne le max des valeurs d'un tableau
 
-Exo 7 - Random alphabet tab et tri
-- Creer une fonction qui créer un tableau avec toutes les caractères de l'alphabet en désordre
-- Creer une fonction qui prend un tableau de char en entrée, et qui le tri (ordre de l'alphabet)
+Exo 7 - Tri tableau int
+- Creer une fonction qui crée un tableau random de int
+- Creer une fonction qui tri un tableau de int.
+=> algo en place (pas de création de tableau)
