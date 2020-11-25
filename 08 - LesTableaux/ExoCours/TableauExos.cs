@@ -57,5 +57,48 @@ namespace ExoCours
             return -1;
         }
 
+        public static int NumberOccurencyInArray(int[] values, int value)
+        {
+            int toAdd = 0;
+
+            for(int i = 0; i < values.Length; i++)
+            {
+                if(values[i] == value)
+                {
+                    toAdd++;
+                }
+            }
+            return toAdd;
+        }
+
+        public static int GetMinInArray(int[] values)
+        {
+            int minValue = values[0];
+
+            for(int i = 1; i < values.Length; i++)
+            {
+                if(minValue > values[i])
+                {
+                    minValue = values[i];
+                }
+            }
+
+            return minValue;
+        }
+
+        public static int GetMaxInArray(int[] values)
+        {
+            int maxValue = values[0];
+
+            for(int i = 1; i < values.Length; i++)
+            {
+                if(maxValue < values[i])
+                {
+                    maxValue = values[i];
+                }
+            }
+
+            return maxValue;
+        }
     }
 }

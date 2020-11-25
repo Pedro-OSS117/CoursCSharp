@@ -20,6 +20,8 @@ Exo 5 - Max et Min valeur dans un tab
 1 - Creer une fonction qui retourne le min des valeurs d'un tableau
 2 - Creer une fonction qui retourne le max des valeurs d'un tableau
 
+Exo 6 - Insert Val - PréBis
+
 Exo 6 - Insert Tab
 Creer une fonction qui prend deux tableaux en entrée et un index
 La fonction insert les valeurs du deuxième dans le premier à partir de l'index passé en paramètre.

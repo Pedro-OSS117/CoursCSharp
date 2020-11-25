@@ -37,7 +37,20 @@ namespace ExoCours
             index = TableauExos.SearchValue(tabExo3, 1);
             DisplayIsContain(index, tabExo3, 1);
 
-
+            Console.WriteLine("============== Exo 4 ================");
+            int[] tabExo4 = new int[] { 3, 6, 8, 3, 4, 3};
+            int valueToSearch = 3;
+            int occurencyValue = TableauExos.NumberOccurencyInArray(tabExo4, valueToSearch);
+            Console.WriteLine($" le nombre d'occurence de la valeur {valueToSearch} dans le tableau {TableauExos.ToStringIntArray(tabExo4)} est de {occurencyValue}.");
+            valueToSearch = 19;
+            occurencyValue = TableauExos.NumberOccurencyInArray(tabExo4, valueToSearch);
+            Console.WriteLine($" le nombre d'occurence de la valeur {valueToSearch} dans le tableau {TableauExos.ToStringIntArray(tabExo4)} est de {occurencyValue}.");
+            
+            Console.WriteLine("============== Exo 5 ================");
+            int[] tabExo5 = new int[] { 1, 4, 3, 9, 6, 0, 3};
+            int valueToReturnMin = TableauExos.GetMinInArray(tabExo5);
+            int valueToReturnMax = TableauExos.GetMaxInArray(tabExo5);
+            Console.WriteLine($"la valeur minimal du tableau est {valueToReturnMin} et la valeur maximal est {valueToReturnMax}");
         }
 
         public static void DisplayIsContain(int index, int[] tab, int value)
