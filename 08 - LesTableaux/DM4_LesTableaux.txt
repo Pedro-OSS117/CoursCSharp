@@ -1,19 +1,27 @@
-Rendu le 
+================== Règles =====================
+A Rendre dans un dossier DM4_LesTableaux.
+Doit être sur vos GitHub avant 10h Mardi 8 décembre sinon -5 à chaque heure de plus.
+-0.2 points à chaque erreur de nomenclature.
+0 sur l'exo si le programme ne compile pas.
+https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/inside-a-program/coding-conventions
 
-Exo 1 - Palindromes
+================== Exo 1 ================== - Nom projet : Palindromes
 - Creer une fonction qui prend en entrée une string et dit si la string est un palindrome. (Indice : utiliser la fonction ToCharArray des string)
 Palindrome : un texte ou un mot dont l'ordre des lettres reste le même qu'on le lise de gauche à droite ou de droite à gauche.
 Exemple de palindrome : "elle", "Tu l'as trop écrasé César ce Port-Salut", "Dogma I am God"
+-  Demontrer le fonctionnement de votre fonction avec plusieurs mots ou phrase (palindrome et non palindrome).
 
-Exo 2 - Random alphabet tab et tri
+================== Exo 2 ================== - Random alphabet tab et tri, Nom projet : TriAlphabetique
 - Creer une fonction qui créer un tableau avec tous les caractères de l'alphabet en désordre.
 - Creer une fonction qui prend un tableau de char en entrée et qui le tri par ordre alphabetique.
+- Utiliser cette fonction avec le tableau contenant l'alphabet et afficher le resultat trié.
 
-Exo 3 - Tri tableau string
-- Creer une fonction qui prend en entrée un tableau de string
-- Après être passé par la fonction le tableau doit contenir les strings triés par ordre alphabetique
+================== Exo 3 ================== - Tri tableau de string, Nom projet : TriAlphabetiqueString
+- Creer une fonction qui prend en entrée un tableau de string.
+- Après être passé par la fonction le tableau doit contenir les strings triées par ordre alphabetique.
+- Utiliser cette fonction avec differents tableaux de string pour demontrer que ça fonctionne.
 
-Exo 4 - Le pendu 
+================== Exo 4 ================== - Le pendu, Nom projet : LePendu
 Principe du pendu : 
 A chaque partie, un mot random est choisi. Le joueur doit trouver le mot en proposant des lettres.
 Le joueur a un nombre de porpositions limités.
