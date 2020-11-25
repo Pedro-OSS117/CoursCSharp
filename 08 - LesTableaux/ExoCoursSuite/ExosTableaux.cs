@@ -85,5 +85,21 @@ namespace ExoCoursSuite
 
             return tabInsert;
         }
+
+        public static void SortArrayIncrease(int[] tabToSort)
+        {
+            for(int i = 0; i < tabToSort.Length; i++)
+            {
+                for(int j = 0; j < tabToSort.Length - 1; j++)
+                {
+                    if(tabToSort[j] > tabToSort[j+1])
+                    {
+                        int tmp = tabToSort[j + 1];
+                        tabToSort[j + 1] = tabToSort[j];
+                        tabToSort[j] = tmp;
+                    }
+                }
+            }
+        }
     }
 }

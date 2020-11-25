@@ -24,7 +24,20 @@ namespace ExoCoursSuite
             int[] tabInsert = ExosTableaux.InsertArrayInArrayAtIndex(tabValeur, tabValeur2, 3);
             ExosTableaux.DisplayIntArray(tabInsert);
             
-            Console.WriteLine("============== Exo 7 ================");
+            Console.WriteLine("============== Exo 7 ================");            
+            int[] tabValeurTri = new int[] { 7, -5, -31, 2 , 4, 7};
+            ExosTableaux.DisplayIntArray(tabValeurTri);
+            ExosTableaux.SortArrayIncrease(tabValeurTri);
+            ExosTableaux.DisplayIntArray(tabValeurTri);
+
+            // String to tableau de caractères
+            string test = "Boby";
+            char[] testChar = test.ToCharArray();
+            testChar.ToString();
+
+            // Random
+            Random rand = new Random();
+            int randomInt = rand.Next(0, 45);
         }
     }
 }
