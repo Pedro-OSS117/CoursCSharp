@@ -1,0 +1,15 @@
+Le debugger permet d'executer le programme instruction par instruction.
+Il permet aussi de voir l'état de chaque variable à chaque instruction.
+
+F5 pour lancer le debugger.
+
+Si configutation non valide =>
+.NetCore
+ensuite create launch.json dans al fenetre de gauche
+
+Breakpoint : on utilise des Breakpoint pour specifier où le proramme doit se stopper lors du debug.
+
+Quand le debugger est lancé : 
+F5 : ocntinuer au prochain Breakpoint.
+F10 : Step over passer à la prochaine instruction.
+F11 : Step into entré dans les details de l'instruction.
