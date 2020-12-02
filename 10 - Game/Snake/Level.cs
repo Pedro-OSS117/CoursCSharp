@@ -22,8 +22,8 @@ namespace Snake
 
             skinWallHori = '-';
             skinWallVert = '|';
-            
-            for(int i = 0; i < grid.Length; i++)
+
+            for (int i = 0; i < grid.Length; i++)
             {
                 grid[i] = emptyChar;
             }
@@ -31,10 +31,22 @@ namespace Snake
             //InitTabRandom();
         }
 
+        public int GetCenterLevelPosition()
+        {
+            int i = height / 2;
+            int j = width / 2;
+            return CalculIndexFromPos(i, j);
+        }
+
+        private int CalculIndexFromPos(int linePos, int rowPos)
+        {
+            return rowPos + linePos * width;
+        }
+
         private void InitTabRandom()
         {
             Random rand = new Random();
-            for(int i = 0; i < grid.Length; i++)
+            for (int i = 0; i < grid.Length; i++)
             {
                 grid[i] = (char)rand.Next(33, 150);
             }
@@ -48,14 +60,22 @@ namespace Snake
             gridContent += CreateLineWithChar(width + 2, skinWallHori);
 
             // Affichage Level
-            for(int i = 0; i < height; i++)
+            for (int i = 0; i < height; i++)
             {
                 gridContent += lineReturnChar.ToString() + skinWallVert;
-                for(int j = 0; j < width; j++)
+                for (int j = 0; j < width; j++)
                 {
-                    gridContent += grid[j + i * width];
+                    int index = CalculIndexFromPos(i, j);
+                    if (index < grid.Length)
+                    {
+                        gridContent += grid[index];
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error access : " + index + ", length : " + grid.Length);
+                    }
                 }
-                gridContent += skinWallVert; 
+                gridContent += skinWallVert;
             }
 
             // Affichage Wall Bottom
@@ -66,11 +86,58 @@ namespace Snake
         private string CreateLineWithChar(int numberChar, char charToDisplay)
         {
             string line = "";
-            for(int i = 0; i < numberChar; i++)
+            for (int i = 0; i < numberChar; i++)
             {
                 line += charToDisplay;
             }
             return line;
+        }
+
+        public void UpdateGrid(int indexPos, char charReplace)
+        {
+            if (indexPos < grid.Length)
+            {
+                grid[indexPos] = charReplace;
+            }
+        }
+
+        public void CleanGrid(int indexPos)
+        {
+            if (indexPos < grid.Length)
+            {
+                grid[indexPos] = emptyChar;
+            }
+        }
+
+        public int GetNewPosition(int currentPos, ConsoleKey key)
+        {
+            int newPosition = currentPos;
+            switch (key)
+            {
+                case ConsoleKey.UpArrow:
+                    newPosition -= width;
+                    break;
+                case ConsoleKey.DownArrow:
+                    newPosition += width;
+                    break;
+                case ConsoleKey.LeftArrow:
+                    newPosition -= 1;
+                    break;
+                case ConsoleKey.RightArrow:
+                    newPosition += 1;
+                    break;
+            }
+
+            if (newPosition < 0)
+            {
+                newPosition = currentPos;
+            }
+
+            if (newPosition >= grid.Length)
+            {
+                newPosition = currentPos;
+            }
+            return newPosition;
         }
     }
 }
