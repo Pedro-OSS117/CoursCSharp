@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Snake
 {
@@ -6,7 +7,7 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Level level = new Level(10, 5);
+            Level level = new Level(20, 10);
 
             int startPos = level.GetCenterLevelPosition();
 
@@ -14,8 +15,12 @@ namespace Snake
 
             ConsoleKey key = ConsoleKey.Spacebar;
 
-            while(key != ConsoleKey.Q)
+            bool isAlive = true;
+
+            while (key != ConsoleKey.Q && isAlive)
             {
+                Thread.Sleep(233);
+
                 Console.Clear();
 
                 // Recuperation de la position courante du player
@@ -26,19 +31,35 @@ namespace Snake
 
                 // Affichage du niveau
                 Console.WriteLine(level.ToStringLevel());
-                
-                // Recuperation des inputs du joueur
-                key = Console.ReadKey().Key;
 
-                // En fonction de l'input du joueur on récupère la nouvelle position du player
-                int newPosition = level.GetNewPosition(currentPosition, key);
+                if (Console.KeyAvailable)
+                {
+                    // Recuperation des inputs du joueur
+                    key = Console.ReadKey().Key;
 
-                // On applique la nouvelle position du player
-                player.SetPosition(newPosition);
-                
-                // On supprime l'ancienne position du player
-                level.CleanGrid(currentPosition);
+                    player.SetDirection(key);
+                }
+                else
+                {
+                    key = ConsoleKey.Spacebar;
+                }
+
+                isAlive = level.ValidateNewPosition(currentPosition, player.GetDirection());
+
+                if (isAlive)
+                {
+                    // En fonction de l'input du joueur on récupère la nouvelle position du player
+                    int newPosition = level.GetNewPosition(currentPosition, player.GetDirection());
+
+                    // On applique la nouvelle position du player
+                    player.SetPosition(newPosition);
+
+                    // On supprime l'ancienne position du player
+                    level.CleanGrid(currentPosition);
+                }
             }
+
+            Console.WriteLine("YOU LOOOSSEE!!!");
         }
     }
 }

@@ -43,6 +43,11 @@ namespace Snake
             return rowPos + linePos * width;
         }
 
+        private int CalculPosHorizontalFromIndex(int index)        
+        {
+            return index % width;
+        }
+
         private void InitTabRandom()
         {
             Random rand = new Random();
@@ -109,21 +114,64 @@ namespace Snake
             }
         }
 
-        public int GetNewPosition(int currentPos, ConsoleKey key)
+        public bool ValidateNewPosition(int currentPos,  Player.Direction dir)
         {
+            int posHoriCurrent = CalculPosHorizontalFromIndex(currentPos);
             int newPosition = currentPos;
-            switch (key)
+
+            switch (dir)
             {
-                case ConsoleKey.UpArrow:
+                case Player.Direction.Up:
                     newPosition -= width;
                     break;
-                case ConsoleKey.DownArrow:
+                case Player.Direction.Bottom:
                     newPosition += width;
                     break;
-                case ConsoleKey.LeftArrow:
+                case Player.Direction.Left:
+                    if(posHoriCurrent - 1 < 0)
+                    {
+                        return false;
+                    }
                     newPosition -= 1;
                     break;
-                case ConsoleKey.RightArrow:
+                case Player.Direction.Right:
+                    if(posHoriCurrent + 1 >= width)
+                    {
+                        return false;
+                    }
+                    newPosition += 1;
+                    break;
+            }
+
+            if (newPosition < 0)
+            {
+                return false;
+            }
+
+            if (newPosition >= grid.Length)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public int GetNewPosition(int currentPos,  Player.Direction dir)
+        {
+            int newPosition = currentPos;
+
+
+            switch (dir)
+            {
+                case Player.Direction.Up:
+                    newPosition -= width;
+                    break;
+                case Player.Direction.Bottom:
+                    newPosition += width;
+                    break;
+                case Player.Direction.Left:
+                    newPosition -= 1;
+                    break;
+                case Player.Direction.Right:
                     newPosition += 1;
                     break;
             }
