@@ -26,7 +26,7 @@ namespace Vector3
             float distance = Vector3.Distance(vector1, vector2);
             Console.WriteLine("\nDistance entre vector 1 et vector 2 : " + distance);
 
-            distance = vector2.Distance(vector1);
+            distance = Vector3.Distance(vector1, vector2);
             Console.WriteLine("\nDistance entre vector 1 et vector 2 : " + distance);
         }
 

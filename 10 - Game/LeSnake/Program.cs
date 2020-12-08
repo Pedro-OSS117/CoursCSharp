@@ -8,8 +8,9 @@ namespace LeSnake
         public static Grid gridLevel;
         public static Player player;
         public static int difficulty = 1;
-        public static Timer timer;
+        public static Timer timer, timerUpdate;
         public static int speed = 200;
+        private static bool notGameOver = true;
 
         static void Main(string[] args)
         {
@@ -94,6 +95,7 @@ namespace LeSnake
             }
             player = new Player(gridLevel.GetStartPosPlayer());
             timer = new Timer(GenerateLoot, null, 0, 5000);
+            timerUpdate = new Timer(UpdatePlayer, null, 0, speed);
         }
 
         static void UpdateGame()
@@ -103,7 +105,7 @@ namespace LeSnake
             while (continueGame)
             {
                 // Attente pour update 
-                Thread.Sleep(speed);
+                Thread.Sleep(42);
 
                 // Clear console avant de réafficer
                 try
@@ -114,15 +116,13 @@ namespace LeSnake
                 {
                     e.ToString();
                 }
-
-                // Update de la position du player
-                bool notGameOver = gridLevel.UpdatePlayerPos(true);
+                
+                //notGameOver = gridLevel.UpdatePlayerPos();
 
                 // Affichage du niveau
                 Console.WriteLine(gridLevel.ToStringLevel());
                 if (notGameOver)
                 {
-
                     // Ask for input
                     Console.WriteLine("Hit key please => Move : Left Arrow, Up Arrow, Down Arrow, Right Arrow ---- Quit : Q ");
                     continueGame = ProcessInput();
@@ -133,6 +133,12 @@ namespace LeSnake
                     continueGame = false;
                 }
             }
+        }
+
+        static void UpdatePlayer(Object o)
+        {
+            // Update de la position du player
+            notGameOver = gridLevel.UpdatePlayerPos();
         }
 
         static void GenerateLoot(Object o)

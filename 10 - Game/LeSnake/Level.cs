@@ -53,31 +53,28 @@ namespace LeSnake
             return width / 2 + width * (height / 2);
         }
 
-        public bool UpdatePlayerPos(bool updateMove)
+        public bool UpdatePlayerPos()
         {
             // manage previous pos
-            if (updateMove)
+            int currentPosPlayer = Program.player.GetPosPlayer();
+            int newPosPlayer = GetNewPosPlayer(currentPosPlayer, Program.player.currentDir);
+            
+            if (!ValidateNextPosPlayer(currentPosPlayer, newPosPlayer))
             {
-                int currentPosPlayer = Program.player.GetPosPlayer();
-                int newPosPlayer = GetNewPosPlayer(currentPosPlayer, Program.player.currentDir);
-                
-                if (!ValidateNextPosPlayer(currentPosPlayer, newPosPlayer))
-                {
-                    return false;
-                }
+                return false;
+            }
 
-                bool thereIsLoot = grid[newPosPlayer] == lootChar;
+            bool thereIsLoot = grid[newPosPlayer] == lootChar;
 
-                int posLosed = Program.player.MovePosition(newPosPlayer);                
-                if(thereIsLoot)
-                {
-                    Program.player.AddPositionToQueue(posLosed);
-                    Program.player.nbrLoot++;
-                }
-                else
-                {
-                    grid[posLosed] = emptyChar;
-                }
+            int posLosed = Program.player.MovePosition(newPosPlayer);                
+            if(thereIsLoot)
+            {
+                Program.player.AddPositionToQueue(posLosed);
+                Program.player.nbrLoot++;
+            }
+            else
+            {
+                grid[posLosed] = emptyChar;
             }
 
             // update next pos
